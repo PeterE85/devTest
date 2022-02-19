@@ -1,0 +1,1 @@
+## welcome, to be able to use the implemented tool you must have Wordpress installed 
