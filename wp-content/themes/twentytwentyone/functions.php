@@ -464,7 +464,7 @@ function twenty_twenty_one_scripts() {
 		);
 	}
 
-	//swiper carousel
+	//swiper test carousel
 	wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper@8.0.6/swiper-bundle.min.js');
 
 	// Responsive embeds script.

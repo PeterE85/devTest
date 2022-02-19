@@ -1,1 +1,1 @@
-## welcome, to be able to use the implemented tool you must have Wordpress installed 
+## Welcome, the implementation of the shortcode with the swiperjs is on Twentytwentyone Theme in custom_shortcode.php file.
