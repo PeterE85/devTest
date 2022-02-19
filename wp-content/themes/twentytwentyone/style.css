@@ -5981,7 +5981,11 @@ footer {
 /*CSS shortcode*/
 .swiper {
 	width: 100%;
-	height: 100%;
+	height: 100%;	
+}
+
+.swiper-wrapper {
+	bottom: 3rem;	
 }
 
 .swiper-slide {
@@ -6010,3 +6014,5 @@ footer {
 	height: 100%;
 	object-fit: cover;
 }
+
+
