@@ -9,6 +9,8 @@
  * @since Twenty Twenty-One 1.0
  */
 
+
+
 // This theme requires WordPress 5.3 or later.
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -26,6 +28,9 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	 *
 	 * @return void
 	 */
+
+	
+	
 	function twenty_twenty_one_setup() {
 		/*
 		 * Make theme available for translation.
@@ -113,6 +118,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				'unlink-homepage-logo' => true,
 			)
 		);
+
+
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -411,6 +418,9 @@ function twenty_twenty_one_scripts() {
 	// Print styles.
 	wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
+	//swiper styles
+	wp_enqueue_style('swiper-styles', 'https://unpkg.com/swiper@8.0.6/swiper-bundle.min.css');
+
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -453,6 +463,9 @@ function twenty_twenty_one_scripts() {
 			true
 		);
 	}
+
+	//swiper carousel
+	wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper@8.0.6/swiper-bundle.min.js');
 
 	// Responsive embeds script.
 	wp_enqueue_script(
@@ -636,4 +649,16 @@ function twentytwentyone_add_ie_class() {
 	</script>
 	<?php
 }
+
+
+require get_template_directory() . '/custom_shortcode.php';
+
+
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+
+
+
+
+
+
+
